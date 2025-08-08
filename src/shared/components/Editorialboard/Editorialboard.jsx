@@ -28,7 +28,7 @@ export default function Editorialboard() {
                                 {
                                     name: "A. Karthikeyan",
                                     university: "SNS College of Technology",
-                                    department: " Department of Electronics and Communication Engineering",
+                                    department: "Department of Electronics and Communication Engineering",
                                     location: "Bangladesh"
                                 },
                                 {
@@ -117,6 +117,24 @@ export default function Editorialboard() {
                                     department: "Department of Biomedical Engineering",
                                     university: "Hamdard University",
                                     location: "Pakistan"
+                                },
+                                {
+                                    name: "Salah Eddine Benatia",
+                                    department: "Department of Computer Science",
+                                    university: "Mascara University",
+                                    location: "Algeria"
+                                },
+                                 {
+                                    name: "Leandro N. Balico",
+                                    department: "Department of Computer Science",
+                                    university: "Federal University of Roraima",
+                                    location: "Brazil"
+                                },
+                                {
+                                    name: "Asef Shahriar",
+                                    department: "Department of Industrial Engineering and Management",
+                                    university: "Khulna University of Engineering & Technology",
+                                    location: "Bangladesh"
                                 },
                             ].map((editorial, index) => (
                                 <div
