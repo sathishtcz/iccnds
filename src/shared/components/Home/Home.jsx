@@ -1,4 +1,5 @@
 import React from 'react'
+import Marquee from 'react-fast-marquee'
 import { GrLocation } from 'react-icons/gr'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { LuMailOpen, LuSend } from 'react-icons/lu'
@@ -6,6 +7,22 @@ import { MdOutlineCalendarToday } from 'react-icons/md'
 
 
 function Home() {
+
+  const imageItems = [
+    { src: 'assets/images/associates/1.png', },
+    { src: 'assets/images/associates/2.jpg', },
+    { src: 'assets/images/associates/3.jpg', },
+    { src: 'assets/images/associates/4.jpg', },
+    { src: 'assets/images/associates/5.jpg', },
+    { src: 'assets/images/associates/6.jpg', },
+    { src: "assets/images/associates/scopus.png", },
+    { src: "assets/images/associates/8.jpg", },
+    { src: "assets/images/associates/9.jpg", },
+    { src: "assets/images/associates/10.jpg", },
+    { src: "assets/images/associates/11.jpg", },
+  ];
+
+
   return (
     <>
       <div className=" text-gray-100 py-6 relative overflow-hidden flex items-center bg-[url('/assets/images/Hero.png')] bg-cover bg-center h-[680px] backdrop-blur-lg">
@@ -62,9 +79,12 @@ function Home() {
                 <div className="mt-4 space-y-3 sm:text-base md:text-lg lg:text-[16px]">
                   <p className="text-xl font-semibold text-indigo-900">Key Highlights of the Conference
                   </p>
-                  <li>International platform for researchers and professionals</li>
-                  <li>High-quality paper presentations and keynote sessions</li>
-                  <li>Focus on Computing, Networking, and Data Science</li>
+                  <ul className='list-disc list-inside'>
+                    <li>International platform for researchers and professionals</li>
+                    <li>High-quality paper presentations and keynote sessions</li>
+                    <li>Focus on Computing, Networking, and Data Science</li>
+                  </ul>
+
                 </div>
               </div>
 
@@ -103,10 +123,13 @@ function Home() {
                 <div className="mt-4 space-y-3 sm:text-base md:text-lg lg:text-[16px]">
                   <p className="text-xl font-semibold text-indigo-900">Here are a few key highlights of our scope:
                   </p>
-                  <li>Deep learning, reinforcement learning, generative AI, and real-time AI applications.</li>
-                  <li>Scalable systems, containerization, microservices, and cloud-native architectures.</li>
-                  <li>PU/TPU computing, distributed computing, and quantum algorithms.</li>
-                  <li>Data mining, visualization, predictive analytics, and decision support systems.</li>
+                  <ul className='list-disc list-inside'>
+                    <li>Deep learning, reinforcement learning, generative AI, and real-time AI applications.</li>
+                    <li>Scalable systems, containerization, microservices, and cloud-native architectures.</li>
+                    <li>PU/TPU computing, distributed computing, and quantum algorithms.</li>
+                    <li>Data mining, visualization, predictive analytics, and decision support systems.</li>
+                  </ul>
+
                 </div>
               </div>
 
@@ -152,29 +175,48 @@ function Home() {
         </div>
       </section>
 
-     
-        <section className="py-10 bg-gradient-to-b from-indigo-100 to-purple-200">
-          <div className="container mx-auto px-3 md:px-12 max-w-8xl">
-            <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-extrabold mb-12 text-indigo-900 tracking-wide">
-              Get in Touch
-            </h2>
+      <section className='container px-2  md:px-4 lg:px-8 mx-auto py-10'>
+        <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold mb-5  text-indigo-900">
+          Indexed Journals
+        </h2>
+        <p className="text-gray-700 sm:text-base md:text-lg lg:text-[18px] text-center max-w-5xl mx-auto leading-relaxed">
+          The Selective accepted papers of our International Conference on Computing, Networking, and Data Science will be recommended to publish in the following index & publisher Journals.
+        </p>
+        <Marquee direction="left" speed={100}>
+          {/* pauseOnHover={true} */}
+          <div className="flex pb-5 pt-5">
+            {imageItems.map((item, index) => (
+              <div key={index} className="flex justify-center mr-10  py-5" >
+                <img src={item.src} alt="images" className=" w-[300px] rounded-lg shadow-[0_0_8px_rgba(0,0,0,0.15)] hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] transition duration-300 hover:-translate-y-4" />
+              </div>
+            ))}
+          </div>
+        </Marquee>
+      </section>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
-              <div className="bg-white shadow-xl rounded-2xl p-8 space-y-6 border border-gray-200">
-                <h3 className="text-2xl font-semibold mb-4 text-indigo-900">Contact Information</h3>
+      <section className="py-10 bg-gradient-to-b from-indigo-100 to-purple-200">
+        <div className="container mx-auto px-3 md:px-12 max-w-8xl">
+          <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-extrabold mb-12 text-indigo-900 tracking-wide">
+            Get in Touch
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            <div className="bg-white shadow-xl rounded-2xl p-8 space-y-6 border border-gray-200">
+              <h3 className="text-2xl font-semibold mb-4 text-indigo-900">Contact Information</h3>
 
 
-                <div className="flex items-center gap-4 p-4 rounded-lg border border-gray-300 hover:bg-gray-100 transition duration-300">
-                  <LuMailOpen className='w-8 h-8 text-indigo-600' />
-                  <div>
-                    <h4 className="text-xl  font-medium  text-indigo-900">Email</h4>
-                    <p className="text-gray-700 sm:text-base md:text-lg lg:text-[18px] wrap-anywhere ">info.iccnds@gmail.com</p>
-                  </div>
+              <div className="flex items-center gap-4 p-4 rounded-lg border border-gray-300 hover:bg-gray-100 transition duration-300">
+                <LuMailOpen className='w-8 h-8 text-indigo-600' />
+                <div>
+                  <h4 className="text-xl  font-medium  text-indigo-900">Email</h4>
+                  <p className="text-gray-700 sm:text-base md:text-lg lg:text-[18px] wrap-anywhere ">info.iccnds@gmail.com</p>
                 </div>
+              </div>
 
-                {/* Phone */}
-                {/* <div className="flex items-center gap-4 p-4 rounded-lg border border-gray-300 hover:bg-gray-100 transition duration-300">
+              {/* Phone */}
+              {/* <div className="flex items-center gap-4 p-4 rounded-lg border border-gray-300 hover:bg-gray-100 transition duration-300">
                                       <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                                           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                                           <path d="M14.05 2a9 9 0 0 1 8 7.94" />
@@ -187,87 +229,87 @@ function Home() {
                                   </div> */}
 
 
-                <div className="flex items-center gap-4 p-4 rounded-lg border border-gray-300 hover:bg-gray-100 transition duration-300">
-                  <GrLocation className='w-8 h-8 text-indigo-600' />
-                  <div>
-                    <h4 className="text-xl  font-medium   text-indigo-900">Location</h4>
-                    <p className="text-gray-700 sm:text-base md:text-lg lg:text-[18px]">Riyadh, Saudi Arabia</p>
-                  </div>
+              <div className="flex items-center gap-4 p-4 rounded-lg border border-gray-300 hover:bg-gray-100 transition duration-300">
+                <GrLocation className='w-8 h-8 text-indigo-600' />
+                <div>
+                  <h4 className="text-xl  font-medium   text-indigo-900">Location</h4>
+                  <p className="text-gray-700 sm:text-base md:text-lg lg:text-[18px]">Riyadh, Saudi Arabia</p>
                 </div>
               </div>
+            </div>
 
 
-              <div className="bg-white shadow-xl p-8 rounded-2xl border border-gray-200">
-                <form>
-                  <div className="flex flex-col  gap-5">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                      <div className="text-xl">
-                        <label className="block text-lg font-medium text-indigo-900">First Name</label>
-                        <input
-                          required
-                          type="text"
-                          name="firstname"
-                          className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500"
-                        />
-                      </div>
-                      <div className="text-xl">
-                        <label className="block text-lg font-medium text-indigo-900">Last Name</label>
-                        <input
-                          required
-                          type="text"
-                          name="lastname"
-                          className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500"
-                        />
-                      </div>
-
-
-                      <div>
-                        <label className="block text-lg font-medium text-indigo-900">Email</label>
-                        <input
-                          required
-                          type="email"
-                          name="email"
-                          className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500"
-                        />
-                      </div>
-
-                      <div className="text-xl">
-                        <label className="block text-lg font-medium text-indigo-900">Mobile Number</label>
-                        <input
-                          required
-                          type="text"
-                          name="mobileno"
-                          className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500"
-                        />
-                      </div>
-
-
-                      <div className='lg:col-span-2'>
-                        <label className="block text-lg font-medium text-indigo-900">Message</label>
-                        <textarea
-                          required
-                          name="message"
-                          rows="5"
-                          className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500"
-                        ></textarea>
-                      </div>
+            <div className="bg-white shadow-xl p-8 rounded-2xl border border-gray-200">
+              <form>
+                <div className="flex flex-col  gap-5">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div className="text-xl">
+                      <label className="block text-lg font-medium text-indigo-900">First Name</label>
+                      <input
+                        required
+                        type="text"
+                        name="firstname"
+                        className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500"
+                      />
+                    </div>
+                    <div className="text-xl">
+                      <label className="block text-lg font-medium text-indigo-900">Last Name</label>
+                      <input
+                        required
+                        type="text"
+                        name="lastname"
+                        className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500"
+                      />
                     </div>
 
 
-                    <button
-                      type="submit"
-                      className="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 cursor-pointer hover:bg-indigo-500 transition duration-300 shadow-lg"
-                    >
-                      <LuSend className="w-5 h-5" />
-                      Send Message
-                    </button>
+                    <div>
+                      <label className="block text-lg font-medium text-indigo-900">Email</label>
+                      <input
+                        required
+                        type="email"
+                        name="email"
+                        className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500"
+                      />
+                    </div>
+
+                    <div className="text-xl">
+                      <label className="block text-lg font-medium text-indigo-900">Mobile Number</label>
+                      <input
+                        required
+                        type="text"
+                        name="mobileno"
+                        className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500"
+                      />
+                    </div>
+
+
+                    <div className='lg:col-span-2'>
+                      <label className="block text-lg font-medium text-indigo-900">Message</label>
+                      <textarea
+                        required
+                        name="message"
+                        rows="5"
+                        className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-indigo-500"
+                      ></textarea>
+                    </div>
                   </div>
-                </form>
-              </div>
+
+
+                  <button
+                    type="submit"
+                    className="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 cursor-pointer hover:bg-indigo-500 transition duration-300 shadow-lg"
+                  >
+                    <LuSend className="w-5 h-5" />
+                    Send Message
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
-        </section>
-      
+        </div>
+      </section>
+
     </>
   )
 }

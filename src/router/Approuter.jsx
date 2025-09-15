@@ -24,7 +24,7 @@ export default function Approuter() {
                     <Route path="/scope" element={<Scopepage />} />
                     <Route path="/conferenceTracks" element={<Conferencetrackspage />} />
                     {/* <Route path="/keyInvitees" element={<Keyinviteespage />} /> */}
-                    <Route path="/organizingCommittee" element={<Commiiteepage />} />
+                    {/* <Route path="/organizingCommittee" element={<Commiiteepage />} /> */}
                     <Route path="/editorial" element={<Editorialpage />} />
                     <Route path="important-dates" element={<Keydatepage />} />
                     <Route path="/paper-submission" element={<Papersubpage />} />

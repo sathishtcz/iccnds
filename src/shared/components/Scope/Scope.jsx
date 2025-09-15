@@ -26,10 +26,13 @@ export default function Scope() {
                 <div className="mt-4 space-y-3 sm:text-base md:text-lg lg:text-[16px]">
                     <p className="text-xl font-semibold text-indigo-900">Here are a few key highlights of our scope:
                     </p>
-                    <li>Deep learning, reinforcement learning, generative AI, and real-time AI applications.</li>
+                    <ul className='list-disc list-inside'>
+                      <li>Deep learning, reinforcement learning, generative AI, and real-time AI applications.</li>
                     <li>Scalable systems, containerization, microservices, and cloud-native architectures.</li>
                     <li>PU/TPU computing, distributed computing, and quantum algorithms.</li>
                     <li>Data mining, visualization, predictive analytics, and decision support systems.</li>
+                    </ul>
+                    
                   </div>
               </div>
 

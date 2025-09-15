@@ -24,15 +24,18 @@ function About() {
                   <p className="text-gray-800 sm:text-base md:text-lg lg:text-[18px] text-justify leading-[30px] mt-4">
                     This premier conference provides an international forum for the presentation and discussion of the
                     latest developments, innovations, and research findings in the fields of computing technologies,
-                    networking solutions, and data science applications.
+                    networking solutions, and data science applications. The Selective accepted papers of our International Conference on Computing, Networking, and Data Science will be recommended to publish in the indexed Journals.
                   </p>
 
                   <div className="mt-4 space-y-3 sm:text-base md:text-lg lg:text-[16px]">
                     <p className="text-xl font-semibold text-indigo-900">Key Highlights of the Conference
                     </p>
-                    <li>International platform for researchers and professionals</li>
+                    <ul className='list-disc list-inside'>
+                       <li>International platform for researchers and professionals</li>
                     <li>High-quality paper presentations and keynote sessions</li>
                     <li>Focus on Computing, Networking, and Data Science</li>
+                    </ul>
+                   
                   </div>
                 </div>
 
