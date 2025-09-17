@@ -45,7 +45,7 @@ export default function Editorialboard() {
         },
         {
             name: "Dr. Zonghai Wang",
-            department: "Department of Information Sciences,",
+            department: "Department of Information Sciences",
             university: "Nanjing Agricultural University",
             location: "China"
         },
