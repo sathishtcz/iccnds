@@ -19,7 +19,7 @@ export default function Register() {
                             <h3 className="text-3xl font-bold mb-1">When?</h3>
                             <div className="w-16 h-1 bg-[#5943F7] mx-auto mb-4"></div>
                             <p className="text-xl">
-                                5<sup>th</sup> March, 2025
+                               17<sup>th</sup> March, 2025
                             </p>
                         </div>
                         {/* Location Section */}

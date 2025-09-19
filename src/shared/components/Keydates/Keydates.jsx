@@ -24,11 +24,11 @@ export default function Keydates() {
 
               <div className=" ">
                 {[
-                  { label: "Abstract Submission Deadline", date: "February 3, 2025" },
-                  { label: "Full Paper Submission Deadline", date: "February 12, 2025" },
-                  { label: "Notification of Acceptance", date: "February 19, 2025" },
-                  { label: "Final Paper Submission", date: "February 27, 2025" },
-                  { label: "Conference Dates", date: "March 5, 2025" },
+                  { label: "Abstract Submission Deadline", date: "February 19, 2025" },
+                  { label: "Full Paper Submission Deadline", date: "February 27, 2025" },
+                  { label: "Notification of Acceptance", date: "March 04, 2025" },
+                  { label: "Final Paper Submission", date: "March 10, 2025" },
+                  { label: "Conference Dates", date: "March 17, 2025" },
                 ].map((item, index) => (
                   <div
                     key={index}
