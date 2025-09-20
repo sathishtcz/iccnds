@@ -1,4 +1,5 @@
 import React from 'react'
+import { GiMicrophone } from 'react-icons/gi'
 import { GrLocation } from 'react-icons/gr'
 import { LuAlarmClockCheck } from 'react-icons/lu'
 import { MdOutlineCalendarToday } from 'react-icons/md'
@@ -15,12 +16,10 @@ export default function Register() {
 
                         {/* Date Section */}
                         <div>
-                            <MdOutlineCalendarToday className='w-8 h-8 text-indigo-600 mx-auto mb-2' />
-                            <h3 className="text-3xl font-bold mb-1">When?</h3>
+                            <GiMicrophone className='w-8 h-8 text-indigo-600 mx-auto mb-2' />
+                            <h3 className="text-3xl font-bold mb-1">ICCNDS</h3>
                             <div className="w-16 h-1 bg-[#5943F7] mx-auto mb-4"></div>
-                            <p className="text-xl">
-                               17<sup>th</sup> March, 2025
-                            </p>
+                            <p className="text-xl">International Conference on Computing, Networking, and Data Science</p>
                         </div>
                         {/* Location Section */}
                         <div>

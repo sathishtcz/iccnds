@@ -39,10 +39,10 @@ function Home() {
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-lg">
             {/* Conference Dates */}
-            <div className="flex items-center gap-3 bg-indigo-900/30 backdrop-blur-sm px-6 py-3 rounded-full transition-transform hover:scale-105">
+            {/* <div className="flex items-center gap-3 bg-indigo-900/30 backdrop-blur-sm px-6 py-3 rounded-full transition-transform hover:scale-105">
               <MdOutlineCalendarToday className='text-purple-300 w-5 h-5' />
               <span>March 17, 2025</span>
-            </div>
+            </div> */}
 
             {/* Location */}
             <div className="flex items-center gap-3 bg-indigo-900/30 backdrop-blur-sm px-6 py-3 rounded-full transition-transform hover:scale-105">

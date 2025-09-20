@@ -15,7 +15,7 @@ export default function Footer() {
 
                         <div>
                             <h2 className="text-xl lg:text-2xl font-bold tracking-wide text-purple-600 px-2 bg-white w-fit rounded-md p-1">
-                                ICCNDS 2025
+                                ICCNDS
                             </h2>
                             <p className="text-gray-200 mt-3 text-xl">
                                 International Conference on Computing, Networking, and Data Science

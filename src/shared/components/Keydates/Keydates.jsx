@@ -1,6 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Keydates() {
+  const [activeYear, setActiveYear] = useState("2025");
+
+  const deadlines = {
+    "2025": [
+      { label: "Abstract Submission Deadline", date: "February 19, 2025" },
+      { label: "Full Paper Submission Deadline", date: "February 27, 2025" },
+      { label: "Notification of Acceptance", date: "March 04, 2025" },
+      { label: "Final Paper Submission", date: "March 10, 2025" },
+      { label: "Conference Dates", date: "March 17, 2025" },
+    ],
+    "2024": [
+      { label: "Abstract Submission Deadline", date: "September 06, 2024" },
+      { label: "Full Paper Submission Deadline", date: "September 10, 2024" },
+      { label: "Notification of Acceptance", date: "September 14, 2024" },
+      { label: "Final Paper Submission", date: "September 20, 2024" },
+      { label: "Conference Dates", date: "September 26, 2025" },
+    ],
+  };
   return (
     <>
       <div className="mt-[90px]">
@@ -13,33 +31,42 @@ export default function Keydates() {
             <div className="grid grid-cols-1 lg:grid-cols-2 px-4 md:px-12 gap-8 max-w-[80rem] mx-auto">
 
               {/* Important Dates */}
-              <div className="relative overflow-hidden mx-auto">
+              <div className="relative overflow-hidden mx-auto flex items-center">
                 <img
-                  className="w-[500px] object-cover rounded-xl"
+                  className="w-[500px] object-cover rounded-xl "
                   src="/assets/images/Keydate.png"
                   alt="Calendar Dates"
                 />
 
               </div>
 
-              <div className=" ">
-                {[
-                  { label: "Abstract Submission Deadline", date: "February 19, 2025" },
-                  { label: "Full Paper Submission Deadline", date: "February 27, 2025" },
-                  { label: "Notification of Acceptance", date: "March 04, 2025" },
-                  { label: "Final Paper Submission", date: "March 10, 2025" },
-                  { label: "Conference Dates", date: "March 17, 2025" },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex justify-between items-center py-3 border-b border-indigo-200/30 hover:bg-indigo-50/50 transition-colors duration-300 px-4 rounded-lg -mx-4"
-                  >
-                    <span className="text-indigo-900 font-medium sm:text-base md:text-lg lg:text-[18px]">{item.label}</span>
-                    <span className="text-purple-700  bg-purple-100/50 px-4 py-2 rounded-full sm:text-base md:text-lg lg:text-[18px]">
-                      {item.date}
-                    </span>
-                  </div>
-                ))}
+              <div className="">
+                <div className="flex justify-center gap-4 mb-6">
+                  {Object.keys(deadlines).map((year) => (
+                    <button
+                      key={year}
+                      onClick={() => setActiveYear(year)}
+                      className={`px-6 py-2 text-lg font-semibold rounded-full transition-all duration-300  cursor-pointer ${activeYear === year? "bg-indigo-600 text-white shadow-md" : "bg-gray-100 text-gray-700 hover:bg-gray-200" }`}>
+                      {year}
+                    </button>
+                  ))}
+                </div>
+
+                <div>
+                  {deadlines[activeYear].map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex justify-between items-center py-3 border-b border-indigo-200/30 hover:bg-indigo-50/50 transition-colors duration-300 px-4 rounded-lg -mx-4"
+                    >
+                      <span className="text-indigo-900 font-medium sm:text-base md:text-lg lg:text-[18px]">
+                        {item.label}
+                      </span>
+                      <span className="text-purple-700 bg-purple-100/50 px-4 py-2 rounded-full sm:text-base md:text-lg lg:text-[18px]">
+                        {item.date}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Bank Details */}
